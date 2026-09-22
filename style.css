@@ -1,0 +1,1000 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =========================================
+   CUERPO
+========================================= */
+
+body {
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+
+/* =========================================
+   FONDO
+========================================= */
+
+.fondo {
+
+    min-height: 100vh;
+
+    padding: 30px 20px 50px;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(255,255,255,0.04) 50%,
+            transparent 50%
+        ),
+        linear-gradient(
+            0deg,
+            rgba(255,255,255,0.04) 50%,
+            transparent 50%
+        ),
+        linear-gradient(
+            135deg,
+            #f50087,
+            #b80066,
+            #ed007f
+        );
+
+    background-size: 90px 90px;
+
+    position: relative;
+
+    min-height: 100vh;
+}
+
+
+/* =========================================
+   CORAZONES DEL FONDO
+========================================= */
+
+.corazones-fondo {
+
+    position: absolute;
+
+    top: 25px;
+
+    left: 0;
+
+    width: 100%;
+
+    text-align: center;
+
+    color: rgba(255,255,255,0.18);
+
+    font-size: 38px;
+
+    letter-spacing: 15px;
+
+    pointer-events: none;
+
+}
+
+
+/* =========================================
+   TITULO
+========================================= */
+
+.titulo {
+
+    position: relative;
+
+    z-index: 5;
+
+    text-align: center;
+
+    color: white;
+
+    font-size: 30px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 25px;
+
+    text-shadow:
+        0 3px 10px rgba(0,0,0,0.25);
+
+    animation: aparecer 1s ease;
+}
+
+
+/* =========================================
+   TARJETA
+========================================= */
+
+.tarjeta {
+
+    position: relative;
+
+    max-width: 900px;
+
+    height: 620px;
+
+    margin: auto;
+
+    background: #fffef0;
+
+    border-radius: 40px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 20px 50px rgba(0,0,0,0.35);
+
+    animation: aparecer 1.2s ease;
+}
+
+
+/* =========================================
+   CORAZÓN
+========================================= */
+
+.corazon {
+
+    position: absolute;
+
+    top: 55px;
+
+    right: 90px;
+
+    width: 430px;
+
+    height: 340px;
+
+    display: grid;
+
+    grid-template-columns: repeat(11, 1fr);
+
+    grid-template-rows: repeat(9, 1fr);
+
+    gap: 6px;
+
+    z-index: 1;
+
+    animation: latido 3s infinite ease-in-out;
+}
+
+
+/* =========================================
+   GIRASOL
+========================================= */
+
+.girasol-corazon {
+
+    width: 25px;
+
+    height: 25px;
+
+    position: relative;
+
+    margin: auto;
+
+    border-radius: 50%;
+
+    background: #8b4a05;
+
+    box-shadow:
+
+        0 -7px 0 #ffc928,
+
+        0 7px 0 #ffc928,
+
+        7px 0 0 #ffc928,
+
+        -7px 0 0 #ffc928,
+
+        5px 5px 0 #ffdb38,
+
+        -5px 5px 0 #ffdb38,
+
+        5px -5px 0 #ffdb38,
+
+        -5px -5px 0 #ffdb38;
+
+    transform: scale(0);
+
+    animation: aparecerFlor 0.5s forwards;
+}
+
+
+.girasol-corazon::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 9px;
+
+    height: 9px;
+
+    border-radius: 50%;
+
+    background: #5e3000;
+
+    top: 8px;
+
+    left: 8px;
+}
+
+
+/* =========================================
+   CONEJO
+========================================= */
+
+.conejo {
+
+    position: absolute;
+
+    left: 60px;
+
+    bottom: 50px;
+
+    width: 260px;
+
+    height: 390px;
+
+    z-index: 5;
+}
+
+
+/* =========================================
+   OREJAS
+========================================= */
+
+.oreja {
+
+    position: absolute;
+
+    width: 65px;
+
+    height: 145px;
+
+    background: white;
+
+    border: 3px solid #222;
+
+    border-radius: 50px;
+
+    top: 0;
+
+    z-index: 1;
+}
+
+
+.oreja-izquierda {
+
+    left: 55px;
+
+    transform: rotate(-7deg);
+}
+
+
+.oreja-derecha {
+
+    right: 55px;
+
+    transform: rotate(7deg);
+}
+
+
+/* INTERIOR OREJA */
+
+.interior-oreja {
+
+    width: 20px;
+
+    height: 85px;
+
+    background: #ffc6df;
+
+    border-radius: 30px;
+
+    position: absolute;
+
+    top: 28px;
+
+    left: 20px;
+}
+
+
+/* =========================================
+   CUERPO
+========================================= */
+
+.cuerpo {
+
+    position: absolute;
+
+    width: 175px;
+
+    height: 190px;
+
+    background: white;
+
+    border: 3px solid #222;
+
+    border-radius: 50% 50% 45% 45%;
+
+    bottom: 25px;
+
+    left: 42px;
+
+    z-index: 1;
+}
+
+
+/* =========================================
+   CABEZA
+========================================= */
+
+.cabeza {
+
+    position: absolute;
+
+    width: 190px;
+
+    height: 180px;
+
+    background: white;
+
+    border: 3px solid #222;
+
+    border-radius: 50%;
+
+    left: 35px;
+
+    top: 95px;
+
+    z-index: 4;
+}
+
+
+/* =========================================
+   OJOS
+========================================= */
+
+.ojo {
+
+    position: absolute;
+
+    width: 14px;
+
+    height: 24px;
+
+    background: #222;
+
+    border-radius: 50%;
+
+    top: 65px;
+}
+
+
+.ojo-izquierdo {
+
+    left: 55px;
+}
+
+
+.ojo-derecho {
+
+    right: 55px;
+}
+
+
+/* =========================================
+   NARIZ
+========================================= */
+
+.nariz {
+
+    position: absolute;
+
+    top: 95px;
+
+    left: 84px;
+
+    color: #ff5b9d;
+
+    font-size: 18px;
+}
+
+
+/* =========================================
+   MEJILLAS
+========================================= */
+
+.mejilla {
+
+    position: absolute;
+
+    width: 25px;
+
+    height: 12px;
+
+    background: #ffd5e4;
+
+    border-radius: 50%;
+
+    top: 94px;
+
+    opacity: 0.7;
+}
+
+
+.mejilla-izquierda {
+
+    left: 25px;
+}
+
+
+.mejilla-derecha {
+
+    right: 25px;
+}
+
+
+/* =========================================
+   BRAZOS
+========================================= */
+
+.brazo {
+
+    position: absolute;
+
+    width: 70px;
+
+    height: 40px;
+
+    background: white;
+
+    border: 3px solid #222;
+
+    border-radius: 50%;
+}
+
+
+/* brazo izquierdo */
+
+.brazo-izquierdo {
+
+    left: -35px;
+
+    top: 80px;
+
+    transform: rotate(35deg);
+
+    z-index: 5;
+}
+
+
+/* brazo derecho */
+
+.brazo-derecho {
+
+    right: -35px;
+
+    top: 80px;
+
+    transform: rotate(-35deg);
+
+    z-index: 5;
+}
+
+
+/* =========================================
+   PIES
+========================================= */
+
+.pie {
+
+    position: absolute;
+
+    width: 85px;
+
+    height: 55px;
+
+    background: white;
+
+    border: 3px solid #222;
+
+    border-radius: 50%;
+
+    bottom: 0;
+
+    z-index: 5;
+}
+
+
+.pie-izquierdo {
+
+    left: 20px;
+
+    transform: rotate(-10deg);
+}
+
+
+.pie-derecho {
+
+    right: 20px;
+
+    transform: rotate(10deg);
+}
+
+
+/* =========================================
+   RAMO
+========================================= */
+
+.ramo {
+
+    position: absolute;
+
+    left: 0;
+
+    top: 160px;
+
+    width: 170px;
+
+    height: 150px;
+
+    z-index: 10;
+
+    transform: rotate(-8deg);
+}
+
+
+/* tallos */
+
+.tallo {
+
+    position: absolute;
+
+    width: 5px;
+
+    height: 110px;
+
+    background: #6b9d20;
+
+    border-radius: 5px;
+
+    transform-origin: bottom;
+}
+
+
+.tallo1 {
+
+    left: 75px;
+
+    top: 35px;
+
+    transform: rotate(-15deg);
+}
+
+
+.tallo2 {
+
+    left: 90px;
+
+    top: 30px;
+
+    transform: rotate(5deg);
+}
+
+
+.tallo3 {
+
+    left: 105px;
+
+    top: 35px;
+
+    transform: rotate(20deg);
+}
+
+
+/* flores */
+
+.girasol {
+
+    position: absolute;
+
+    font-size: 55px;
+
+    filter:
+        drop-shadow(0 3px 2px rgba(0,0,0,0.2));
+
+    animation: balanceo 2s infinite ease-in-out;
+}
+
+
+.flor1 {
+
+    left: 45px;
+
+    top: 5px;
+
+}
+
+
+.flor2 {
+
+    left: 75px;
+
+    top: 20px;
+
+}
+
+
+.flor3 {
+
+    left: 15px;
+
+    top: 35px;
+
+}
+
+
+.flor4 {
+
+    left: 50px;
+
+    top: 55px;
+
+}
+
+
+.flor5 {
+
+    left: 90px;
+
+    top: 55px;
+
+}
+
+
+/* =========================================
+   MENSAJE
+========================================= */
+
+.mensaje {
+
+    position: absolute;
+
+    right: 45px;
+
+    bottom: 40px;
+
+    width: 480px;
+
+    text-align: center;
+
+    z-index: 20;
+}
+
+
+.mensaje h1 {
+
+    font-family: cursive;
+
+    color: #e39a00;
+
+    font-size: 36px;
+
+    margin-bottom: 10px;
+}
+
+
+.mensaje p {
+
+    color: #9a496a;
+
+    font-size: 15px;
+}
+
+
+/* =========================================
+   BLOQUE DE CÓDIGO
+========================================= */
+
+.codigo {
+
+    max-width: 700px;
+
+    margin: 30px auto 0;
+
+    padding: 20px;
+
+    background: #071c28;
+
+    border-radius: 20px;
+
+    color: white;
+
+    font-family: monospace;
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,0.35);
+}
+
+
+.barra {
+
+    border-bottom: 1px solid #53636b;
+
+    padding-bottom: 12px;
+
+    margin-bottom: 15px;
+}
+
+
+.barra span:not(.nombre) {
+
+    display: inline-block;
+
+    width: 13px;
+
+    height: 13px;
+
+    border-radius: 50%;
+
+    margin-right: 5px;
+}
+
+
+.rojo {
+
+    background: #ff5b5b;
+}
+
+
+.amarillo {
+
+    background: #ffd43b;
+}
+
+
+.verde {
+
+    background: #62d66d;
+}
+
+
+.nombre {
+
+    float: right;
+
+    color: white;
+}
+
+
+.codigo pre {
+
+    font-size: 16px;
+
+    line-height: 1.6;
+
+    white-space: pre-wrap;
+}
+
+
+.amarillo-texto {
+
+    color: #ffd43b;
+}
+
+
+.azul {
+
+    color: #58d5ff;
+}
+
+
+.rosado {
+
+    color: #ff6fae;
+}
+
+
+/* =========================================
+   ANIMACIONES
+========================================= */
+
+@keyframes aparecer {
+
+    from {
+
+        opacity: 0;
+
+        transform: scale(0.85);
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: scale(1);
+    }
+}
+
+
+@keyframes aparecerFlor {
+
+    to {
+
+        transform: scale(1);
+    }
+}
+
+
+@keyframes latido {
+
+    0%, 100% {
+
+        transform: scale(1);
+    }
+
+    50% {
+
+        transform: scale(1.03);
+    }
+}
+
+
+@keyframes balanceo {
+
+    0%, 100% {
+
+        transform: rotate(-4deg);
+    }
+
+    50% {
+
+        transform: rotate(4deg);
+    }
+}
+
+
+/* =========================================
+   CELULAR
+========================================= */
+
+@media (max-width: 700px) {
+
+    .fondo {
+
+        padding: 20px 10px 30px;
+    }
+
+
+    .titulo {
+
+        font-size: 19px;
+
+        line-height: 1.4;
+    }
+
+
+    .tarjeta {
+
+        height: 720px;
+
+        border-radius: 30px;
+    }
+
+
+    /* corazón */
+
+    .corazon {
+
+        width: 310px;
+
+        height: 250px;
+
+        top: 40px;
+
+        right: 10px;
+
+        gap: 3px;
+    }
+
+
+    .girasol-corazon {
+
+        width: 17px;
+
+        height: 17px;
+
+        box-shadow:
+
+            0 -5px 0 #ffc928,
+
+            0 5px 0 #ffc928,
+
+            5px 0 0 #ffc928,
+
+            -5px 0 0 #ffc928,
+
+            3px 3px 0 #ffdb38,
+
+            -3px 3px 0 #ffdb38,
+
+            3px -3px 0 #ffdb38,
+
+            -3px -3px 0 #ffdb38;
+    }
+
+
+    .girasol-corazon::after {
+
+        width: 6px;
+
+        height: 6px;
+
+        top: 5px;
+
+        left: 5px;
+    }
+
+
+    /* conejo */
+
+    .conejo {
+
+        left: 15px;
+
+        bottom: 35px;
+
+        transform: scale(0.72);
+
+        transform-origin: bottom left;
+    }
+
+
+    /* mensaje */
+
+    .mensaje {
+
+        right: 10px;
+
+        bottom: 30px;
+
+        width: 270px;
+    }
+
+
+    .mensaje h1 {
+
+        font-size: 25px;
+    }
+
+
+    .mensaje p {
+
+        font-size: 14px;
+    }
+
+
+    /* código */
+
+    .codigo {
+
+        font-size: 12px;
+
+        margin-top: 20px;
+    }
+
+
+    .codigo pre {
+
+        font-size: 12px;
+    }
+
+}
