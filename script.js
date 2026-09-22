@@ -27,7 +27,7 @@ if (corazon) {
 
     formaCorazon.forEach((fila, filaIndex) => {
 
-        for (let columna = 0; columna < fila.length; columna++) {
+        for (let columna = 1; columna < fila.length; columna++) {
 
             if (fila[columna] === "X") {
 
